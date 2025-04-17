@@ -18,7 +18,6 @@ html, :root {
   /* BORDER RADIUS */
   --base-radius: 10px;
   --sm-radius: 5px;
-  --md-radius: 16x;
   --lg-radius: 24px;
 }
 
@@ -47,6 +46,21 @@ body {
 
   background: url(./assets/images/bg-pattern.png);
   min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .banner {
+    width: 100%;
+    padding-right: 4rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #FC6709;
+    text-align: right;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    font-size: var(--xl-text);
+    font-weight: 900;
+  }
 }
 
  #form-container {
@@ -64,7 +78,6 @@ body {
 
   & #message {
     font-size: var(--md-text);
-    font-weight: bold;
   }
 
   & form {
@@ -73,7 +86,7 @@ body {
 
     & .body {
       border: .25px solid transparent;
-      box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 4px -1px rgba(0, 0, 0, 0.2);
       padding-bottom: 2rem;
     }
 
@@ -83,14 +96,59 @@ body {
   }
 }
 
+fieldset {
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+
+  & legend {
+    display: none;
+  }
+}
+
+label {
+	display: inline-block;
+  font-weight: 700;
+}
+
+p label {
+	width: 100%;
+}
+
+input {
+	font: 1em sans-serif;
+  color: black;
+	width: 250px;
+  padding: .25rem;
+	box-sizing: border-box;
+	border: 1px solid #999;
+  border-radius: var(--sm-radius);
+
+  &:focus, :focus-visible {
+    background-color: #FD9C60;
+    outline: 1px solid black;
+    box-shadow: 0 8px 2px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+
 button {
   --tex-base: 18px;
-
   background-color: #FC6709;
   padding: .75rem 1.5rem;
   font-size: var(--text-base);
   font-weight: 600;
   border: none;
   border-radius: var(--base-radius);
+  transition: ease .25s;
 
+  &:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 2px -2px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    transform: scale(0.90);
+    transition: ease-in-out .25s;
+    box-shadow: none;
+  }
 }
