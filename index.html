@@ -15,7 +15,7 @@
 <body>
   <div id="image-container">
     <div class="banner">
-      <p>Banner</p>
+      <p>Banner</>
     </div>
   </div>
   <div id="form-container">
@@ -27,7 +27,9 @@
       <p>I dare you to try and fill-up the form</p>
     </div>
     <form action="" method="">
-      <p>
+      <div class="body">
+        <h2>Time to sign-up</h2>
+        <p>
         <label for="firstname">First Name</label>
         <input type="text" id="firstname" name="first_name" required>
       </p>
@@ -50,10 +52,12 @@
       <p><label for="password-confirm">Confirm Password</label>
         <input type="text" id="password-confirm" name="password-confirm" required>
       </p>
-      <div class="divider"></div>
-      <button type="submit">Create account</button>
-      <p>Already have an account? <a href="" class="login">Log in</a></p>
-      </form>
+      </div>
+      <div class="footer">
+        <button type="submit">Create account</button>
+        <p>Already have an account? <a href="" class="login">Log in</a></p>
+</div>
+    </form>
   </div>
 </body>
 
